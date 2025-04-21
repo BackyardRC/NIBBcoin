@@ -1,0 +1,231 @@
+/* NIBBcoin Main Stylesheet */
+
+:root {
+    --nibb-dark-blue: #0a2342;
+    --nibb-pink: #e83e8c;
+    --nibb-purple: #6f42c1;
+    --nibb-orange: #fd7e14;
+    --nibb-teal: #20c997;
+    --nibb-light-blue: #17a2b8;
+    --nibb-yellow: #ffc107;
+    --nibb-green: #28a745;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--nibb-dark-blue);
+    color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-top: 0;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-pink {
+    background-color: var(--nibb-pink);
+    color: white;
+}
+
+.btn-purple {
+    background-color: var(--nibb-purple);
+    color: white;
+}
+
+.btn-orange {
+    background-color: var(--nibb-orange);
+    color: white;
+}
+
+.btn-teal {
+    background-color: var(--nibb-teal);
+    color: white;
+}
+
+/* Card Styles */
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--nibb-teal);
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-clip: padding-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: var(--nibb-teal);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(32, 201, 151, 0.25);
+}
+
+/* Select Styles */
+.select-container {
+    position: relative;
+}
+
+.select-container::after {
+    content: '▼';
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+select.form-control {
+    appearance: none;
+    padding-right: 30px;
+}
+
+/* Diamond Hands Styling */
+.diamond-hands {
+    color: var(--nibb-teal);
+    font-weight: bold;
+}
+
+/* Responsive Grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Chart and Calculator Containers */
+.chart-container,
+.calculator-container {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    height: 600px;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        height: 400px;
+    }
+}
+
+/* Info Boxes */
+.info-box {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.info-box h3 {
+    margin-top: 0;
+    color: var(--nibb-teal);
+}
+
+/* Animation for Diamond Hands */
+@keyframes sparkle {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.sparkle {
+    animation: sparkle 2s infinite;
+    display: inline-block;
+}
